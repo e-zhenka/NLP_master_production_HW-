@@ -35,11 +35,11 @@ try:
     ))
     channel = connection.channel()
 
-    # Declare queues
+    # Объявляем очереди
     channel.queue_declare(queue='features')
     channel.queue_declare(queue='y_pred')
 
-    # Set up consumer
+    # Настраиваем 
     channel.basic_consume(
         queue='features',
         on_message_callback=callback,
