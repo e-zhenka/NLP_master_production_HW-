@@ -5,7 +5,7 @@ import os
 
 CSV_FILE = os.getenv('CSV_FILE', '/app/logs/metric_log.csv')
 
-# Create CSV file with headers if it doesn't exist
+# Создаем CSV файл с заголовками, если он не существует
 if not os.path.exists(CSV_FILE):
     with open(CSV_FILE, mode='w', newline='') as file:
         writer = csv.writer(file)
